@@ -27,8 +27,23 @@
       
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></span><font size=3> Cart</a></li></font>
-		    <li><a href="loginpage.php"><span class="glyphicon glyphicon-log-in"></span><font size=3> Login</a></li></font>
-        <li><a href="contact.php"><span class="glyphicon glyphicon-globe"></span></span><font size=3> Contact Us</a></li></font>
+
+        <?php  
+            if(isset($_SESSION['u_id']))
+            {
+              $user=$_SESSION['u_uid'];
+            echo '<li><a href="loginpage.php"><span class="glyphicon glyphicon-log-in"></span><font size=3>'.$user.'</a></li></font>
+              ';
+            }
+            else{
+            echo '<li><a href="loginpage.php"><span class="glyphicon glyphicon-log-in"></span><font size=3> Login</a></li></font>
+        <li><a href="contact.php"><span class="glyphicon glyphicon-globe"></span></span><font size=3> Contact Us</a></li></font>';
+            }
+          ?>
+
+
+
+		    
 		  </ul>
     </div>
 </div>
