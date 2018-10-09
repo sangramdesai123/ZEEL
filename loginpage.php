@@ -13,20 +13,20 @@
 	    <div class="col-sm-4 w3-container w3-center w3-animate-left">
       <h3 style="font-family: monospace; background-color: #ce991e" style="box-shadow: 0 0  100px rgb(0,0,0,0.5)"><b>LOGIN</b></h3><br>
 	
-  <form action="new2.php" method="post">
+  <form action="controller/login.php" method="GET">
     <div  class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" value="<?php echo $var?>" name="var" id="email" placeholder="Enter email" required="True">
+      <input type="email" class="form-control" value="" name="email" id="email" placeholder="Enter email" required="True">
     </div>
     <div class="form-group">
       <label for="password">Password:</label>
-      <input type="password" class="form-control"  value="<?php echo $var1?>" name="var1" id="password" placeholder="Enter password" required="True">
+      <input type="password" class="form-control"  value="" name="pwd" id="password" placeholder="Enter password" required="True">
     </div>
     <div class="checkbox">
       <label><input type="checkbox"><b>Remember me</b></label>
     </div>
-    <input class="btn btn-outline-success" onclick="validate()" value="Login" type="submit">
-  </form action="new2.php" method="post">
+    <input class="btn btn-outline-success" onclick="validate()" name="submit" value="Login" type="submit">
+  </form>
 
       </div>
 	  
@@ -37,27 +37,27 @@
 	   <div class="col-sm-4 w3-container w3-center w3-animate-right">
 	   <div class="ex3">
       <h3 style="font-family: monospace; background-color: #ce991e" style="box-shadow: 0 0  100px rgb(0,0,0,0.5)"><b>SIGNUP</b></h3><br>
-   <form  action="new3.php" method="post">
+   <form  action="controller/signup.php" method="GET">
     <div class="form-group">
       <label for="name">Name:</label>
-      <input type="text" class="form-control" id="name" placeholder="Enter Your Name" required="true">
+      <input type="text" class="form-control" name="name" id="name" placeholder="Enter Your Name" required="true">
     </div>
 	    <div class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" required="true" >
+      <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required="true" >
     </div>
 	
     <div class="form-group">
       <label for="password">Password:</label>
-      <input type="password" class="form-control" id="password" placeholder="Enter password" required="true">
+      <input type="password" class="form-control" name="pwd" id="password" placeholder="Enter password" required="true">
     </div>
 	<div class="form-group">
       <label for="tel">Mobile Number:</label>
-      <input type="tel" class="form-control" id="tel" placeholder="Enter Mobile Number" required="true">
+      <input type="tel" class="form-control" name="phone" id="tel" placeholder="Enter Mobile Number" required="true">
     </div>
 	<div class="form-group">
       <label for="address">Address:</label>
-	  <textarea rows="4" cols="45" input type="address" name="description" class="form-control" id="address" placeholder="Enter Your Address" required="true"></textarea>
+	  <textarea rows="4" cols="45" input type="address" name="address" class="form-control" id="address" placeholder="Enter Your Address" required="true"></textarea>
       
     </div>
 

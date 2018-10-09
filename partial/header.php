@@ -1,3 +1,6 @@
+<?php 
+session_start(); 
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,9 +32,9 @@
         <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></span><font size=3> Cart</a></li></font>
 
         <?php  
-            if(isset($_SESSION['u_id']))
+            if(isset($_SESSION['u_name']))
             {
-              $user=$_SESSION['u_uid'];
+              $user=$_SESSION['u_name'];
             echo '<li><a href="loginpage.php"><span class="glyphicon glyphicon-log-in"></span><font size=3>'.$user.'</a></li></font>
               ';
             }
