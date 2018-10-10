@@ -133,3 +133,29 @@
   height: 250px;
   box-shadow: 0 0  100px rgb(0,0,0,0.5);
 }
+/*cart style*/
+.cart{
+  margin-top: 40px;
+  background-color: white;
+  border: solid 1px black;
+}
+.cart td div{
+         display: table-cell;
+        width: 150px;
+        height: 100px;
+        vertical-align: middle;
+}
+.cart .imgtable{
+  width:180px;
+}
+.cart .imgtable img{
+  padding: 0px;
+  align-self: center;
+  width: 100px;
+  height: 100px;
+}
+.cart td div .remove{
+  color:#ff0909;
+  font-size: 40px;
+  font-weight: 2;
+}

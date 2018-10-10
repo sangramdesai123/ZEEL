@@ -6,65 +6,72 @@
 <div class="container text-center">    
  
   <div class="row">
+  <?php
+      $pid=$_GET['btn'];
+      include 'controller/db.php';
+      $sql="SELECT * FROM product WHERE Product_Id='$pid'";
+      $res=mysqli_query($con,$sql);
+        while ($row=mysqli_fetch_array($res)) {
+          echo '
+
     <div class="col-lg-4">
-      <img src="img/men/m1.jpg" class="img-responsive" alt="Image" style="width:320px; " hspace="10">
-   <br><button type="submit" class="btn btn-default " style="text-align: center">Add to Cart</button><br>
+         <img src='.$row["Url"].' class="img-responsive" alt="Image" style="width:320px; " hspace="10">
+         <br><button type="submit" class="btn btn-default " style="text-align: center">Add to Cart</button><br>
     </div>
   <div class="col-lg-8" style="background-color:white ; padding-bottom:30px; ">
   
   <table id="customers" style="padding-bottom:30px">
-   <h2 style="text-align: center;"><b>Product Details</b></h2>
-  <tr>
-    <td>Men White & Blue Printed Round Neck T-shirt</td>
-    <td>United Colors of Benetton</td>
-  
-  </tr>
-  <tr>
-    <td>Price</td>
-    <td>Rs. 859</td>
-    
-  </tr>
-  <tr>
-    <td>Discount</td>
-    <td>No</td>
-   
-  </tr>
-  <tr>
-    <td>Color</td>
-    <td>White and Blue Printed</td>
-    
-  </tr>
-  <tr>
-    <td>Material</td>
-    <td>Cotton : 100%</td>
+     <h2 style="text-align: center;"><b>Product Details</b></h2>
 
-  </tr>
-  <tr>
-    <td>Product Id</td>
-    <td>PM101</td>
-  
-  </tr>
-  <tr>
-    <td>Brand Id</td>
-    <td>MB101</td>
+    <tr>
+      <td>Price</td>
+      <td>'.$row["Price"].'</td>
+      
+    </tr>
+    <tr>
+      <td>Discount</td>
+      <td>No</td>
+     
+    </tr>
+    <tr>
+      <td>Color</td>
+      <td>'.$row["Color"].'</td>
+      
+    </tr>
+    <tr>
+      <td>Material</td>
+      <td>'.$row["Material"].'</td>
+
+    </tr>
+    <tr>
+      <td>Product Id</td>
+      <td>'.$row["Product_Id"].'</td>
     
-  </tr>
-  <tr>
-    <td>Size</td>
-    <td>40</td>
-   
-  </tr>
-  <tr>
-    <td>Coupon Code</td>
-    <td>BBNEW50</td>
-   
-  </tr>
+    </tr>
+    <tr>
+      <td>Brand Id</td>
+      <td>MB'.$row["Product_Id"].'</td>
+      
+    </tr>
+    <tr>
+      <td>Size</td>
+      <td>'.$row["Size"].'</td>
+     
+    </tr>
+    <tr>
+      <td>Coupon Code</td>
+      <td>BBNEW50</td>
+     
+    </tr>
 
-</table>
+  </table>
 
-  </div>
+  </div>';
+}
+?>        
   </div>
 </div>
+
 <?php
   include 'partial/footer.php';
  ?>
