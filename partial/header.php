@@ -29,14 +29,14 @@ session_start();
     <div class="collapse navbar-collapse" id="myNavbar">
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></span><font size=3> Cart</a></li></font>
+        <li><a href="./cart.php"><span class="glyphicon glyphicon-shopping-cart"></span></span><font size=3> Cart</a></li></font>
 
         <?php  
             if(isset($_SESSION['u_name']))
             {
               $user=$_SESSION['u_name'];
-            echo '<li><a href="loginpage.php"><span class="glyphicon glyphicon-log-in"></span><font size=3>'.$user.'</a></li></font>
-              ';
+            echo '<li><a href="loginpage.php"><span class="glyphicon glyphicon-log-in"></span><font size=3> '.$user.'</a></li></font>
+              <li><a href="./logout.php"><span class="glyphicon glyphicon-log-in"></span><font size=3> Logout</a></li></font>';
             }
             else{
             echo '<li><a href="loginpage.php"><span class="glyphicon glyphicon-log-in"></span><font size=3> Login</a></li></font>

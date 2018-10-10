@@ -16,11 +16,11 @@
   <form action="controller/login.php" method="GET">
     <div  class="form-group">
       <label for="email">Email:</label>
-      <input type="email" class="form-control" value="" name="email" id="email" placeholder="Enter email" required="True">
+      <input type="email" class="form-control"  name="email" id="email" placeholder="Enter email" required="True">
     </div>
     <div class="form-group">
       <label for="password">Password:</label>
-      <input type="password" class="form-control"  value="" name="pwd" id="password" placeholder="Enter password" required="True">
+      <input type="password" class="form-control"  name="pwd" id="password" placeholder="Enter password" required="True">
     </div>
     <div class="checkbox">
       <label><input type="checkbox"><b>Remember me</b></label>

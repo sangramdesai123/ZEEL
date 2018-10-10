@@ -7,7 +7,7 @@
  
   <div class="row">
     <div class="col-lg-4">
-      <img src="images/men/m1.jpg" class="img-responsive" alt="Image" style="width:320px; " hspace="10">
+      <img src="img/men/m1.jpg" class="img-responsive" alt="Image" style="width:320px; " hspace="10">
    <br><button type="submit" class="btn btn-default " style="text-align: center">Add to Cart</button><br>
     </div>
   <div class="col-lg-8" style="background-color:white ; padding-bottom:30px; ">
