@@ -19,34 +19,50 @@
     <tbody>
            <?php 
               include 'controller/db.php';
-              $sql='SELECT * FROM product WHERE Type="Men"';
+              $uu=$_SESSION['u_email'];
+              $sql="SELECT * FROM cart WHERE email='$uu'";
               $res=mysqli_query($con,$sql);
               while ($row=mysqli_fetch_array($res)) {
-               echo $row['Color'];
+               $pid=$row['Product_Id'];
                echo "<br>";   
+                  //for product trable
+                  $sqll="SELECT * FROM product WHERE Product_Id='$pid'";
+                  $ress=mysqli_query($con,$sqll);
+                  while ($roww=mysqli_fetch_array($ress)) {
 
+                      echo '
+                      <tr>
+                        <th class="imgtable"><img src="'.$roww['Url'].'"></th>
+                        <td><div>'.$roww['Product_Id'].'</div></td>
+                        <td><div>'.$roww['Brand'].'</div></td>
+                        <td><div>'.$roww['Color'].'</div></td>
+                        <td><div>'.$roww['Size'].'</div></td>
+                        <td><div>'.$roww['Material'].'</div></td>
+                        <td><div>'.$roww['Price'].'</div></td>
+                        <td style="width: 15px;">
+                            <div>
+                              <form action="removecart.php" method="GET">
+
+                              <button class="close remove" name="btn" value="';echo $row['Product_Id'].'">
+                                  <span aria-hidden="true">&times;</span>
+                              </button>
+                            </form>
+
+                           </div>
+                        </td>
+                      </tr>
+
+
+                      ';
+
+                  }
               }
            ?>
 
 
 
 
-      <tr>
-        <th class="imgtable"><img src="img/men/m1.jpg"></th>
-        <td><div>Mark</div></td>
-        <td><div>Mark</div></td>
-        <td><div>Mark</div></td>
-        <td><div>Mark</div></td>
-        <td><div>Mark</div></td>
-        <td><div>Mark</div></td>
-        <td style="width: 15px;">
-          <div>
-              <button  type="button" class="close remove">
-                <span aria-hidden="true">&times;</span>
-              </button>
-        </div>
-        </td>
-      </tr>
+      
       
 
 
