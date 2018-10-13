@@ -11,8 +11,8 @@ curl_setopt($ch, CURLOPT_HEADER, FALSE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
 curl_setopt($ch, CURLOPT_HTTPHEADER,
-            array("X-Api-Key:XXXXXXXXXXXXXXXXXXX",
-                  "X-Auth-Token:XXXXXXXXXXXXXXXXXXX"));
+            array("X-Api-Key:XXXXXXXXXXXXXXXXXXXXXXXXXx",
+                  "X-Auth-Token:XXXXXXXXXXXXXXXXXXXXXXXXXXx"));
 $name=$_SESSION['u_name'];
 $tel=$_SESSION['u_phone'];
 $pay=$_GET['btn'];
