@@ -2,7 +2,6 @@
   include 'partial/header.php';
  ?>
 <div class="container cart">
-	
   <table class="table">
     <thead>
       <tr>
@@ -13,6 +12,7 @@
         <th scope="col">Size</th>
         <th scope="col">Material</th>
         <th scope="col">Total Price</th>
+        <th scope="col">Checkout</th>
         <th scope="col">Remove</th>
       </tr>
     </thead>
@@ -32,13 +32,24 @@
 
                       echo '
                       <tr>
-                        <th class="imgtable"><img src="'.$roww['Url'].'"></th>
-                        <td><div>'.$roww['Product_Id'].'</div></td>
+                        <td style="width:140px" class="imgtable"><img src="'.$roww['Url'].'"></td>
+                        <td style="width:100px" ><div>'.$roww['Product_Id'].'</div></td>
                         <td><div>'.$roww['Brand'].'</div></td>
                         <td><div>'.$roww['Color'].'</div></td>
-                        <td><div>'.$roww['Size'].'</div></td>
+                        <td style="width:80px" ><div>'.$roww['Size'].'</div></td>
                         <td><div>'.$roww['Material'].'</div></td>
-                        <td><div>'.$roww['Price'].'</div></td>
+                        <td style="width:100px"  ><div>'.$roww['Price'].'</div></td>
+                         <td style="width: 15px;">
+                            <div>
+                              <form action="checkout.php" method="GET">
+                                
+                              <button class="" name="btn" value="';echo $row['Product_Id'].'">
+                                  <span aria-hidden="true">Payment</span>
+                              </button>
+                            </form>
+
+                           </div>
+                        </td>
                         <td style="width: 15px;">
                             <div>
                               <form action="removecart.php" method="GET">

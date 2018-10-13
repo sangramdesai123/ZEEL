@@ -16,7 +16,14 @@
 
     <div class="col-lg-4">
          <img src='.$row["Url"].' class="img-responsive" alt="Image" style="width:320px; " hspace="10">
-         <br><button type="submit" class="btn btn-default " style="text-align: center">Add to Cart</button><br>
+          
+           <form action="addtocart.php" method="GET">
+           <br>
+              <button class="btn btn-default "  name="btn" value="';echo $row['Product_Id'].'">
+                  <span aria-hidden="true">Add to Cart</span>
+              </button>
+            </form>
+
     </div>
   <div class="col-lg-8" style="background-color:white ; padding-bottom:30px; ">
   
